@@ -97,9 +97,18 @@ function decode(decodificando) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(param1, param2) {
+  let arrayOrdenado = param1.sort();
+  let arrayObjeto = [];
+  if (param1.length < param2.length) {
+    return 'Vazio!';
+  }
+  for (let index = 0; index < arrayOrdenado.length; index +=1) {
+    arrayObjeto.push({'tech' : param1[index], 'name' : param2});
+  }
+  return arrayObjeto;
 }
+
 
 module.exports = {
   calcArea,
