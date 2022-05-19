@@ -100,7 +100,7 @@ function decode(decodificando) {
 function techList(param1, param2) {
   let arrayOrdenado = param1.sort();
   let arrayObjeto = [];
-  if (param1.length < param2.length) {
+  if (param1.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < arrayOrdenado.length; index +=1) {
@@ -108,8 +108,6 @@ function techList(param1, param2) {
   }
   return arrayObjeto;
 }
-
-
 module.exports = {
   calcArea,
   catAndMouse,
