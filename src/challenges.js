@@ -46,6 +46,7 @@ function highestCount(arrayDeFora) {
 }
 
 // Desafio 7
+// Como encontrar numeros mais proximos https://pt.stackoverflow.com/questions/242363/como-encontrar-o-n%C3%BAmero-mais-aproximado-com-javascript
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
@@ -73,6 +74,7 @@ function fizzBuzz(fizz) {
 }
 
 // Desafio 9
+// como trocar vogais por numeros e vice-versa : https://pt.stackoverflow.com/questions/525266/como-trocar-vogais-de-uma-string-por-n%C3%BAmeros
 function encode(recebeString) {
   let resultado = recebeString;
   for (let index = 0; index < recebeString.length; index +=1) {

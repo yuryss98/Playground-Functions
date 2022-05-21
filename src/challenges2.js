@@ -43,10 +43,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+// Referencias
 
+// Como obter apenas numeros de uma string: https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+
+// como transformar uma sting de number em numeros de fato: https://blog.da2k.com.br/2015/01/13/javascript-brincando-com-numeros/#:~:text=Se%20voc%C3%AA%20conhece%20a%20estrutura,voc%C3%AA%20quer%20fazer%20%C3%A9%20concatenar.
+
+// Rafael França
+function hydrate(string) {
+  let pegaSoNumeros = string.replace(/\D/gm, '');
+  let resultadoSoma = 0;
+  for (let index = 0; index < pegaSoNumeros.length; index +=1) {
+    resultadoSoma += Number(pegaSoNumeros[index]);
+  }
+  if (resultadoSoma === 1) {
+    return resultadoSoma + ' copo de água';
+  }
+  return resultadoSoma + ' copos de água';
+}
 module.exports = {
   generatePhoneNumber,
   hydrate,
