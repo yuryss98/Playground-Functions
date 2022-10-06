@@ -1,6 +1,6 @@
 // Desafio 11
 function generatePhoneNumber(phone) {
-  if (phone.length < 11 || phone.length > 11) {
+  if (phone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   let numerosRepitidos = 0;
@@ -51,15 +51,15 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Rafael França
 function hydrate(string) {
-  let pegaSoNumeros = string.replace(/\D/gm, '');
+  const pegaSoNumeros = string.replace(/[^0-9]/g, '');
   let resultadoSoma = 0;
-  for (let index = 0; index < pegaSoNumeros.length; index +=1) {
+  for (let index = 0; index < pegaSoNumeros.length; index += 1) {
     resultadoSoma += Number(pegaSoNumeros[index]);
   }
   if (resultadoSoma === 1) {
-    return resultadoSoma + ' copo de água';
+    return `${resultadoSoma} copo de água`;
   }
-  return resultadoSoma + ' copos de água';
+  return `${resultadoSoma} copos de água`;
 }
 module.exports = {
   generatePhoneNumber,
